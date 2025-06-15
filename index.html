@@ -1,0 +1,1146 @@
+                    <form id="addExpenseForm">
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <label for="spender-name" class="form-label form-required">Name</label>
+                            <input type="text" id="spender-name" class="form-input<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Expense Manager</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Monthly Expense Manager</h1>
+            <p>Track and manage your monthly expenses efficiently</p>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-item" data-tab="login">Login Page</div>
+            <div class="nav-item" data-tab="dashboard">Dashboard</div>
+            <div class="nav-item" data-tab="add-expense">Add Expense</div>
+            <div class="nav-item" data-tab="view-expenses">View Expenses</div>
+            <div class="nav-item" data-tab="reports">Reports</div>
+            <div class="nav-item" data-tab="admin-panel">Admin Panel</div>
+            <div class="nav-item" data-tab="user-profile">User Profile</div>
+            <div class="nav-item" data-tab="mobile-layout">Mobile Layout</div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Login Tab -->
+            <div class="tab-content" id="login-tab">
+                <h2 class="page-title">Login</h2>
+                
+                <div class="login-container">
+                    <!-- Logo and Header -->
+                    <div class="login-header">
+                        <div class="logo">EM</div>
+                        <h1 class="app-name">Expense Manager</h1>
+                        <p class="tagline">Track, manage, and optimize your expenses</p>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form id="loginForm">
+                        <!-- Email Field -->
+                        <div class="form-group">
+                            <label for="email" class="form-label form-required">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                class="form-input" 
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                        <!-- Password Field -->
+                        <div class="form-group">
+                            <label for="password" class="form-label form-required">Password</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                class="form-input" 
+                                placeholder="Enter your password"
+                                required
+                            >
+                        </div>
+
+                        <!-- Remember Me & Forgot Password -->
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                            <div>
+                                <input type="checkbox" id="rememberMe">
+                                <label for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" style="color: #3a7bd5; text-decoration: none;">Forgot Password?</a>
+                        </div>
+
+                        <!-- Login Button -->
+                        <button type="button" class="btn btn-primary" style="width: 100%;" onclick="switchTab('dashboard')">Log In</button>
+                        
+                        <!-- Register Link -->
+                        <div style="text-align: center; margin-top: 15px;">
+                            <p>Don't have an account? <a href="#" style="color: #3a7bd5; text-decoration: none;" onclick="alert('Registration form would appear here')">Sign up</a></p>
+                        </div>
+                        
+                        <!-- Social Login Options -->
+                        <div style="text-align: center; margin-top: 20px;">
+                            <p style="margin-bottom: 15px; color: #666;">Or sign in with</p>
+                            <div style="display: flex; gap: 10px; justify-content: center;">
+                                <button type="button" class="btn btn-outline" onclick="switchTab('dashboard')">Google</button>
+                                <button type="button" class="btn btn-outline" onclick="switchTab('dashboard')">Facebook</button>
+                                <button type="button" class="btn btn-outline" onclick="switchTab('dashboard')">Instagram</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Dashboard Tab -->
+            <div class="tab-content" id="dashboard-tab">
+                <h2 class="page-title">Dashboard</h2>
+                
+                <!-- Stats Cards -->
+                <div class="dashboard-grid">
+                    <!-- Total Spent -->
+                    <div class="stat-card">
+                        <div class="stat-title">Total Spent</div>
+                        <div class="stat-value">₹42,582</div>
+                        <div class="stat-change text-danger">
+                            <span class="stat-icon">↑</span> 12% from last month
+                        </div>
+                    </div>
+
+                    <!-- Monthly Budget -->
+                    <div class="stat-card">
+                        <div class="stat-title">Monthly Budget</div>
+                        <div class="stat-value">₹50,000</div>
+                        <div class="stat-change text-success">
+                            <span class="stat-icon">✓</span> 85% used
+                        </div>
+                    </div>
+
+                    <!-- Biggest Expense -->
+                    <div class="stat-card">
+                        <div class="stat-title">Biggest Category</div>
+                        <div class="stat-value">Housing</div>
+                        <div class="stat-change">
+                            <span class="stat-icon">₹</span> 15,000 (35% of total)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="charts-grid">
+                    <!-- Monthly Trend Chart -->
+                    <div class="chart-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <div style="font-size: 18px; font-weight: 500;">Monthly Spending Trend</div>
+                            <button class="btn btn-outline">Last 6 Months</button>
+                        </div>
+                        <div style="height: 250px; background-color: #f8f9fa; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+                            Monthly spending chart visualization
+                        </div>
+                    </div>
+                    
+                    <!-- Category Distribution -->
+                    <div class="chart-card">
+                        <div style="font-size: 18px; font-weight: 500; margin-bottom: 15px;">Spending by Category</div>
+                        <div style="height: 250px; background-color: #f8f9fa; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+                            Category distribution chart
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Expenses -->
+                <div style="background-color: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07); margin-bottom: 20px; overflow: hidden;">
+                    <div style="padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee;">
+                        <div style="font-size: 18px; font-weight: 500;">Recent Expenses</div>
+                        <button class="btn btn-outline" onclick="switchTab('view-expenses')">View All</button>
+                    </div>
+                    <div style="padding: 10px 0;">
+                        <div style="display: flex; padding: 10px 20px; border-bottom: 1px solid #eee; align-items: center;">
+                            <div style="width: 40px; height: 40px; border-radius: 8px; background-color: rgba(0, 208, 156, 0.2); color: #00d09c; display: flex; align-items: center; justify-content: center; margin-right: 15px;">🍔</div>
+                            <div style="flex: 1;">
+                                <div style="font-weight: 500;">Lunch at Taj Hotel</div>
+                                <div style="font-size: 13px; color: #666;">Today, 1:30 PM</div>
+                            </div>
+                            <div style="font-weight: 600; color: #e74c3c;">₹1,250</div>
+                        </div>
+                        <div style="display: flex; padding: 10px 20px; border-bottom: 1px solid #eee; align-items: center;">
+                            <div style="width: 40px; height: 40px; border-radius: 8px; background-color: rgba(58, 123, 213, 0.2); color: #3a7bd5; display: flex; align-items: center; justify-content: center; margin-right: 15px;">🏠</div>
+                            <div style="flex: 1;">
+                                <div style="font-weight: 500;">Monthly Rent</div>
+                                <div style="font-size: 13px; color: #666;">June 10, 2025</div>
+                            </div>
+                            <div style="font-weight: 600; color: #e74c3c;">₹15,000</div>
+                        </div>
+                        <div style="display: flex; padding: 10px 20px; border-bottom: 1px solid #eee; align-items: center;">
+                            <div style="width: 40px; height: 40px; border-radius: 8px; background-color: rgba(243, 156, 18, 0.2); color: #f39c12; display: flex; align-items: center; justify-content: center; margin-right: 15px;">🚕</div>
+                            <div style="flex: 1;">
+                                <div style="font-weight: 500;">Uber Ride</div>
+                                <div style="font-size: 13px; color: #666;">June 8, 2025</div>
+                            </div>
+                            <div style="font-weight: 600; color: #e74c3c;">₹450</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add Expense Button -->
+                <div style="text-align: center;">
+                    <button class="btn btn-primary" onclick="switchTab('add-expense')">Add New Expense</button>
+                </div>
+            </div>
+
+            <!-- Add Expense Tab -->
+            <div class="tab-content" id="add-expense-tab">
+                <h2 class="page-title">Add New Expense</h2>
+                
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <a href="#" onclick="switchTab('dashboard')">Home</a> &gt; Add Expense
+                </div>
+                
+                <!-- Add Expense Form -->
+                <div class="form-container">
+                    <div class="form-title">Expense Details</div>
+                    
+                    <form id="addExpenseForm">
+                        <!-- Name Field -->
+                        <div class="form-group">
+                            <label for="spender-name" class="form-label form-required">Name</label>
+                            <input type="text" id="spender-name" class="form-input" placeholder="Enter name of spender" required>
+                        </div>
+                        
+                        <!-- Amount and Date -->
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="amount" class="form-label form-required">Amount</label>
+                                <input type="number" id="amount" class="form-input" placeholder="0.00" step="0.01" min="0" required>
+                            </div>
+                            <div class="form-column">
+                                <label for="date" class="form-label form-required">Date</label>
+                                <input type="date" id="date" class="form-input" value="2025-06-15" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Category and Payment Method -->
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label for="category" class="form-label form-required">Category</label>
+                                <select id="category" class="form-select" required>
+                                    <option value="" disabled selected>Select Category</option>
+                                    <option value="food-dining">Food & Dining</option>
+                                    <option value="transportation">Transportation</option>
+                                    <option value="shopping">Shopping</option>
+                                    <option value="emi">EMI</option>
+                                    <option value="house-rent">House Rent</option>
+                                    <option value="entertainment">Entertainment</option>
+                                    <option value="healthcare">Healthcare</option>
+                                    <option value="education">Education</option>
+                                    <option value="utilities">Utilities</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+                            <div class="form-column">
+                                <label for="payment-method" class="form-label">Payment Method</label>
+                                <select id="payment-method" class="form-select">
+                                    <option value="" disabled selected>Select Method</option>
+                                    <option value="cash">Cash</option>
+                                    <option value="credit-card">Credit Card</option>
+                                    <option value="debit-card">Debit Card</option>
+                                    <option value="upi">UPI</option>
+                                    <option value="net-banking">Net Banking</option>
+                                    <option value="others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Description -->
+                        <div class="form-group">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea id="description" class="form-textarea" placeholder="Enter description of the expense..."></textarea>
+                        </div>
+                        
+                        <!-- Receipt/Bill Upload -->
+                        <div class="form-group">
+                            <label for="receipt" class="form-label">Receipt/Bill (Optional)</label>
+                            <input type="file" id="receipt" style="margin-top: 5px;">
+                        </div>
+                        
+                        <!-- Buttons -->
+                        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+                            <button type="button" class="btn btn-secondary" onclick="switchTab('dashboard')">Cancel</button>
+                            <button type="button" class="btn btn-primary" onclick="saveExpense()">Save Expense</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Tip Box -->
+                <div style="background-color: #e8f8f5; border-left: 4px solid #2ecc71; padding: 15px; border-radius: 0 5px 5px 0;">
+                    <strong style="color: #27ae60;">Tip:</strong> Add receipts to keep better track of your expenses and for tax purposes.
+                </div>
+            </div>
+
+            <!-- View Expenses Tab -->
+            <div class="tab-content" id="view-expenses-tab">
+                <h2 class="page-title">View All Expenses</h2>
+                
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <a href="#" onclick="switchTab('dashboard')">Home</a> &gt; View Expenses
+                </div>
+                
+                <!-- Filters Section -->
+                <div style="background-color: #f8f9fa; border-radius: 5px; padding: 15px 20px; margin-bottom: 20px; border: 1px solid #e0e0e0;">
+                    <!-- Search Bar -->
+                    <div class="search-bar">
+                        <input type="text" class="search-input" placeholder="Search expenses...">
+                        <button class="search-button">Search</button>
+                    </div>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <div style="font-size: 16px; font-weight: 500;">Filter Expenses</div>
+                        <div style="font-size: 12px; color: #3498db; cursor: pointer;">Collapse</div>
+                    </div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 15px;">
+                        <div style="flex: 1; min-width: 200px;">
+                            <label style="display: block; margin-bottom: 5px; font-size: 14px; color: #555;">Date From</label>
+                            <input type="date" style="width: 100%; padding: 8px 10px; border: 1px solid #ddd; border-radius: 4px;" value="2025-06-01">
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <label style="display: block; margin-bottom: 5px; font-size: 14px; color: #555;">Date To</label>
+                            <input type="date" style="width: 100%; padding: 8px 10px; border: 1px solid #ddd; border-radius: 4px;" value="2025-06-15">
+                        </div>
+                        <div style="flex: 1; min-width: 200px;">
+                            <label style="display: block; margin-bottom: 5px; font-size: 14px; color: #555;">Category</label>
+                            <select style="width: 100%; padding: 8px 10px; border: 1px solid #ddd; border-radius: 4px;">
+                                <option value="">All Categories</option>
+                                <option value="food-dining">Food & Dining</option>
+                                <option value="transportation">Transportation</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="emi">EMI</option>
+                                <option value="house-rent">House Rent</option>
+                                <option value="entertainment">Entertainment</option>
+                                <option value="healthcare">Healthcare</option>
+                                <option value="education">Education</option>
+                                <option value="utilities">Utilities</option>
+                                <option value="others">Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                        <button class="btn btn-outline">Reset Filters</button>
+                        <button class="btn btn-primary">Apply Filters</button>
+                    </div>
+                </div>
+                
+                <!-- Expenses Table -->
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <div>
+                            <div style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">All Expenses</div>
+                            <div style="font-size: 14px; color: #7f8c8d;">Showing 12 expenses totaling ₹42,582.00</div>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn btn-outline">Export</button>
+                            <button class="btn btn-primary" onclick="switchTab('add-expense')">Add New Expense</button>
+                        </div>
+                    </div>
+                    
+                    <div class="expenses-table-container">
+                        <table class="expenses-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th>Payment Method</th>
+                                    <th>Amount</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>June 15, 2025</td>
+                                    <td>Lunch at Taj Hotel</td>
+                                    <td><span class="category-badge category-food-dining">Food & Dining</span></td>
+                                    <td>Credit Card</td>
+                                    <td style="font-weight: 500; color: #e74c3c;">₹1,250.00</td>
+                                    <td>
+                                        <div style="display: flex; gap: 5px;">
+                                            <button class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">Edit</button>
+                                            <button class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>June 10, 2025</td>
+                                    <td>Monthly Rent</td>
+                                    <td><span class="category-badge category-house-rent">House Rent</span></td>
+                                    <td>Bank Transfer</td>
+                                    <td style="font-weight: 500; color: #e74c3c;">₹15,000.00</td>
+                                    <td>
+                                        <div style="display: flex; gap: 5px;">
+                                            <button class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">Edit</button>
+                                            <button class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>June 5, 2025</td>
+                                    <td>Home Loan EMI</td>
+                                    <td><span class="category-badge category-emi">EMI</span></td>
+                                    <td>Auto Debit</td>
+                                    <td style="font-weight: 500; color: #e74c3c;">₹12,500.00</td>
+                                    <td>
+                                        <div style="display: flex; gap: 5px;">
+                                            <button class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">Edit</button>
+                                            <button class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">Delete</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Pagination -->
+                    <div style="display: flex; justify-content: center; gap: 5px; margin-top: 20px;">
+                        <button style="width: 36px; height: 36px; border-radius: 4px; border: 1px solid #ddd; background-color: white; cursor: pointer;">◀</button>
+                        <button style="width: 36px; height: 36px; border-radius: 4px; border: 1px solid #3498db; background-color: #3498db; color: white; cursor: pointer;">1</button>
+                        <button style="width: 36px; height: 36px; border-radius: 4px; border: 1px solid #ddd; background-color: white; cursor: pointer;">2</button>
+                        <button style="width: 36px; height: 36px; border-radius: 4px; border: 1px solid #ddd; background-color: white; cursor: pointer;">3</button>
+                        <button style="width: 36px; height: 36px; border-radius: 4px; border: 1px solid #ddd; background-color: white; cursor: pointer;">▶</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reports Tab -->
+            <div class="tab-content" id="reports-tab">
+                <h2 class="page-title">Expense Reports</h2>
+                
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <a href="#" onclick="switchTab('dashboard')">Home</a> &gt; Reports
+                </div>
+                
+                <!-- Report Controls -->
+                <div class="report-controls">
+                    <div class="control-group">
+                        <label for="report-period" class="control-label">Time Period</label>
+                        <select id="report-period" class="control-select">
+                            <option value="current-month">Current Month</option>
+                            <option value="last-month">Last Month</option>
+                            <option value="last-3-months">Last 3 Months</option>
+                            <option value="last-6-months">Last 6 Months</option>
+                            <option value="this-year">This Year</option>
+                            <option value="custom">Custom Range</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="report-grouping" class="control-label">Group By</label>
+                        <select id="report-grouping" class="control-select">
+                            <option value="category">Category</option>
+                            <option value="day">Day</option>
+                            <option value="week">Week</option>
+                            <option value="month">Month</option>
+                            <option value="payment-method">Payment Method</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <label for="report-category" class="control-label">Category Filter</label>
+                        <select id="report-category" class="control-select">
+                            <option value="all">All Categories</option>
+                            <option value="food-dining">Food & Dining</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="emi">EMI</option>
+                            <option value="house-rent">House Rent</option>
+                            <option value="entertainment">Entertainment</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="education">Education</option>
+                            <option value="utilities">Utilities</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                    
+                    <div class="control-group">
+                        <button id="generate-report" class="btn btn-primary">Generate Report</button>
+                    </div>
+                </div>
+                
+                <!-- Summary Cards -->
+                <div class="statistics-grid" style="margin-bottom: 20px;">
+                    <div class="statistic-box">
+                        <h4 class="statistic-title">Total Expenses</h4>
+                        <div class="statistic-value">₹42,582</div>
+                        <div class="statistic-description">
+                            <span style="color: #e74c3c;">↑ 12%</span> from last month
+                        </div>
+                    </div>
+                    
+                    <div class="statistic-box">
+                        <h4 class="statistic-title">Average Daily</h4>
+                        <div class="statistic-value">₹1,419</div>
+                        <div class="statistic-description">
+                            <span style="color: #e74c3c;">↑ 8%</span> from last month
+                        </div>
+                    </div>
+                    
+                    <div class="statistic-box">
+                        <h4 class="statistic-title">Highest Category</h4>
+                        <div class="statistic-value">House Rent</div>
+                        <div class="statistic-description">
+                            <span>35%</span> of total spending
+                        </div>
+                    </div>
+                    
+                    <div class="statistic-box">
+                        <h4 class="statistic-title">Budget Status</h4>
+                        <div class="statistic-value">85%</div>
+                        <div class="statistic-description">
+                            <span style="color: #2ecc71;">↓ 5%</span> from last month
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Report Charts -->
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 20px;">
+                    <div style="background-color: white; border-radius: 5px; border: 1px solid #e0e0e0; overflow: hidden;">
+                        <div style="padding: 15px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="font-size: 16px; font-weight: 500;">Spending by Category</div>
+                            <div style="display: flex; gap: 5px;">
+                                <button style="background: none; border: none; cursor: pointer; font-size: 16px;">⬇️</button>
+                                <button style="background: none; border: none; cursor: pointer; font-size: 16px;">⛶</button>
+                            </div>
+                        </div>
+                        <div style="padding: 20px; height: 270px; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
+                            Category distribution chart visualization
+                        </div>
+                    </div>
+                    
+                    <div style="background-color: white; border-radius: 5px; border: 1px solid #e0e0e0; overflow: hidden;">
+                        <div style="padding: 15px; border-bottom: 1px solid #e0e0e0; display: flex; justify-content: space-between; align-items: center;">
+                            <div style="font-size: 16px; font-weight: 500;">Monthly Spending Trend</div>
+                            <div style="display: flex; gap: 5px;">
+                                <button style="background: none; border: none; cursor: pointer; font-size: 16px;">⬇️</button>
+                                <button style="background: none; border: none; cursor: pointer; font-size: 16px;">⛶</button>
+                            </div>
+                        </div>
+                        <div style="padding: 20px; height: 270px; display: flex; align-items: center; justify-content: center; background-color: #f8f9fa;">
+                            Monthly trend chart visualization
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Detailed Reports -->
+                <div style="background-color: white; border-radius: 5px; border: 1px solid #e0e0e0; margin-bottom: 20px;">
+                    <div style="padding: 15px; border-bottom: 1px solid #e0e0e0;">
+                        <div style="font-size: 16px; font-weight: 500;">Detailed Expense Analysis</div>
+                    </div>
+                    
+                    <div style="display: flex; border-bottom: 1px solid #e0e0e0;">
+                        <div style="padding: 10px 15px; cursor: pointer; border-bottom: 2px solid #3498db; color: #3498db; font-weight: 500;">Top Expenses</div>
+                        <div style="padding: 10px 15px; cursor: pointer;">Category Breakdown</div>
+                        <div style="padding: 10px 15px; cursor: pointer;">Payment Methods</div>
+                        <div style="padding: 10px 15px; cursor: pointer;">Time Analysis</div>
+                    </div>
+                    
+                    <div style="padding: 15px;">
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 12px 15px; text-align: left; background-color: #f8f9fa; border-bottom: 1px solid #e0e0e0; font-weight: 500;">Description</th>
+                                    <th style="padding: 12px 15px; text-align: left; background-color: #f8f9fa; border-bottom: 1px solid #e0e0e0; font-weight: 500;">Category</th>
+                                    <th style="padding: 12px 15px; text-align: left; background-color: #f8f9fa; border-bottom: 1px solid #e0e0e0; font-weight: 500;">Date</th>
+                                    <th style="padding: 12px 15px; text-align: left; background-color: #f8f9fa; border-bottom: 1px solid #e0e0e0; font-weight: 500;">Amount</th>
+                                    <th style="padding: 12px 15px; text-align: left; background-color: #f8f9fa; border-bottom: 1px solid #e0e0e0; font-weight: 500;">% of Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e0e0e0;">Monthly Rent</td>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e0e0e0;"><span class="category-badge category-house-rent">House Rent</span></td>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e0e0e0;">June 10, 2025</td>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e0e0e0;">₹15,000.00</td>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e0e0e0;">35.2%</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e0e0e0;">Home Loan EMI</td>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e0e0e0;"><span class="category-badge category-emi">EMI</span></td>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e0e0e0;">June 5, 2025</td>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e0e0e0;">₹12,500.00</td>
+                                    <td style="padding: 12px 15px; border-bottom: 1px solid #e0e0e0;">29.4%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <button class="btn btn-primary">Download Full Report</button>
+                </div>
+            </div>
+
+            <!-- Admin Panel Tab -->
+            <div class="tab-content" id="admin-panel-tab">
+                <h2 class="page-title">Admin Panel</h2>
+                
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <a href="#" onclick="switchTab('dashboard')">Home</a> &gt; Admin Panel
+                </div>
+                
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <!-- Admin Sidebar -->
+                    <div class="admin-sidebar" style="min-width: 250px; margin-bottom: 20px;">
+                        <div class="admin-menu-title">Admin Menu</div>
+                        <ul class="admin-menu">
+                            <li class="admin-menu-item">
+                                <a href="#" class="admin-menu-link active">
+                                    <span class="admin-menu-icon">👤</span> Manage Users
+                                </a>
+                            </li>
+                            <li class="admin-menu-item">
+                                <a href="#" class="admin-menu-link">
+                                    <span class="admin-menu-icon">📁</span> Categories
+                                </a>
+                            </li>
+                            <li class="admin-menu-item">
+                                <a href="#" class="admin-menu-link">
+                                    <span class="admin-menu-icon">✉️</span> Email Settings
+                                </a>
+                            </li>
+                            <li class="admin-menu-item">
+                                <a href="#" class="admin-menu-link">
+                                    <span class="admin-menu-icon">⚙️</span> System Settings
+                                </a>
+                            </li>
+                            <li class="admin-menu-item">
+                                <a href="#" class="admin-menu-link">
+                                    <span class="admin-menu-icon">📊</span> Usage Statistics
+                                </a>
+                            </li>
+                            <li class="admin-menu-item">
+                                <a href="#" class="admin-menu-link">
+                                    <span class="admin-menu-icon">🔒</span> Security Logs
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Admin Content -->
+                    <div class="admin-content" style="flex: 1; min-width: 300px;">
+                        <!-- User Management -->
+                        <div class="user-management">
+                            <div class="management-header">
+                                <div class="management-title">User Management</div>
+                                <div class="management-actions">
+                                    <button class="btn btn-primary">
+                                        <span>+</span> Add New User
+                                    </button>
+                                    <button class="btn btn-secondary">
+                                        <span>↓</span> Export Users
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div style="overflow-x: auto;">
+                                <table class="user-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Role</th>
+                                            <th>Status</th>
+                                            <th>Created</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="font-weight: 500;">John Smith</td>
+                                            <td>john@monthly.com</td>
+                                            <td><span style="display: inline-block; padding: 4px 8px; border-radius: 20px; font-size: 12px; font-weight: 500; color: white; background-color: #e74c3c;">Admin</span></td>
+                                            <td><span style="display: inline-block; padding: 4px 8px; border-radius: 20px; font-size: 12px; font-weight: 500; color: white; background-color: #2ecc71;">Active</span></td>
+                                            <td>Jan 1, 2024</td>
+                                            <td>
+                                                <div style="display: flex; gap: 5px;">
+                                                    <button style="padding: 5px 10px; border-radius: 4px; background-color: #3498db; color: white; border: none; font-size: 13px; cursor: pointer;">Edit</button>
+                                                    <button style="padding: 5px 10px; border-radius: 4px; background-color: #e74c3c; color: white; border: none; font-size: 13px; cursor: pointer;">Delete</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: 500;">Jane Smith</td>
+                                            <td>jane@monthly.com</td>
+                                            <td><span style="display: inline-block; padding: 4px 8px; border-radius: 20px; font-size: 12px; font-weight: 500; color: white; background-color: #2ecc71;">User</span></td>
+                                            <td><span style="display: inline-block; padding: 4px 8px; border-radius: 20px; font-size: 12px; font-weight: 500; color: white; background-color: #2ecc71;">Active</span></td>
+                                            <td>Jan 15, 2024</td>
+                                            <td>
+                                                <div style="display: flex; gap: 5px;">
+                                                    <button style="padding: 5px 10px; border-radius: 4px; background-color: #3498db; color: white; border: none; font-size: 13px; cursor: pointer;">Edit</button>
+                                                    <button style="padding: 5px 10px; border-radius: 4px; background-color: #e74c3c; color: white; border: none; font-size: 13px; cursor: pointer;">Delete</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Profile Tab -->
+            <div class="tab-content" id="user-profile-tab">
+                <h2 class="page-title">User Profile</h2>
+                
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <a href="#" onclick="switchTab('dashboard')">Home</a> &gt; Profile Settings
+                </div>
+                
+                <!-- Personal Information and Security Settings -->
+                <div class="profile-grid">
+                    <!-- Personal Information -->
+                    <div class="profile-card">
+                        <h3 class="profile-section-title">Personal Information</h3>
+                        <form id="personalInfoForm">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" id="firstName" class="form-input" value="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" id="lastName" class="form-input" value="Smith">
+                            </div>
+                            <div class="form-group">
+                                <label for="userEmail" class="form-label">Email Address</label>
+                                <input type="email" id="userEmail" class="form-input" value="john.smith@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" class="form-input" value="+91 98765 43210">
+                            </div>
+                            <button type="button" class="btn btn-primary">Update Profile</button>
+                        </form>
+                    </div>
+                    
+                <div class="profile-card">
+                    <h3 class="profile-section-title">Account Settings</h3>
+                    <form id="accountSettingsForm">
+                        <div class="form-group">
+                            <label for="currencySelect" class="form-label">Currency</label>
+                            <select id="currencySelect" class="form-select">
+                                <option value="INR" selected>Indian Rupee (₹)</option>
+                                <option value="USD">US Dollar ($)</option>
+                                <option value="EUR">Euro (€)</option>
+                                <option value="GBP">British Pound (£)</option>
+                                <option value="JPY">Japanese Yen (¥)</option>
+                                <option value="CAD">Canadian Dollar (C$)</option>
+                                <option value="AUD">Australian Dollar (A$)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="dateFormat" class="form-label">Date Format</label>
+                            <select id="dateFormat" class="form-select">
+                                <option value="DD/MM/YYYY" selected>DD/MM/YYYY</option>
+                                <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+                                <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Theme</label>
+                            <div style="display: flex; gap: 15px;">
+                                <div>
+                                    <input type="radio" id="themeLight" name="theme" value="light" checked>
+                                    <label for="themeLight">Light</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="themeDark" name="theme" value="dark">
+                                    <label for="themeDark">Dark</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="themeSystem" name="theme" value="system">
+                                    <label for="themeSystem">System Default</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn btn-primary">Save Settings</button>
+                    </form>
+                </div>
+                    
+                    <!-- Security Settings -->
+                    <div class="profile-card">
+                        <h3 class="profile-section-title">Security Settings</h3>
+                        <form id="securityForm">
+                            <div class="form-group">
+                                <label for="currentPassword" class="form-label">Current Password</label>
+                                <input type="password" id="currentPassword" class="form-input" placeholder="Enter current password">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword" class="form-label">New Password</label>
+                                <input type="password" id="newPassword" class="form-input" placeholder="Enter new password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword" class="form-label">Confirm New Password</label>
+                                <input type="password" id="confirmPassword" class="form-input" placeholder="Confirm new password">
+                            </div>
+                            <button type="button" class="btn btn-primary">Change Password</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Notification Preferences -->
+                    <div class="profile-card profile-card-full">
+                        <h3 class="profile-section-title">Notification Preferences</h3>
+                        <form id="notificationForm">
+                            <div class="notification-group">
+                                <div>
+                                    <div class="notification-option">
+                                        <div class="notification-title">
+                                            <input type="checkbox" id="emailNotifications" class="notification-checkbox" checked>
+                                            <label for="emailNotifications" class="notification-label">Email Notifications</label>
+                                        </div>
+                                        <p class="notification-description">Receive monthly expense summaries</p>
+                                    </div>
+                                    <div class="notification-option">
+                                        <div class="notification-title">
+                                            <input type="checkbox" id="weeklySummaries" class="notification-checkbox">
+                                            <label for="weeklySummaries" class="notification-label">Weekly Summaries</label>
+                                        </div>
+                                        <p class="notification-description">Weekly expense reports</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="notification-option">
+                                        <div class="notification-title">
+                                            <input type="checkbox" id="budgetAlerts" class="notification-checkbox" checked>
+                                            <label for="budgetAlerts" class="notification-label">Budget Alerts</label>
+                                        </div>
+                                        <p class="notification-description">Get notified when approaching budget limits</p>
+                                    </div>
+                                    <div class="notification-option">
+                                        <div class="notification-title">
+                                            <input type="checkbox" id="securityAlerts" class="notification-checkbox" checked>
+                                            <label for="securityAlerts" class="notification-label">Security Alerts</label>
+                                        </div>
+                                        <p class="notification-description">Login notifications and security updates</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary">Save Preferences</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Account Statistics -->
+                    <div class="profile-card profile-card-full">
+                        <h3 class="profile-section-title">Account Statistics</h3>
+                        <div class="statistics-grid">
+                            <div class="statistic-box">
+                                <h4 class="statistic-title">Total Expenses</h4>
+                                <div class="statistic-value green">₹0</div>
+                                <div class="statistic-description">All time</div>
+                            </div>
+                            <div class="statistic-box">
+                                <h4 class="statistic-title">Entries Made</h4>
+                                <div class="statistic-value">0</div>
+                                <div class="statistic-description">Total records</div>
+                            </div>
+                            <div class="statistic-box">
+                                <h4 class="statistic-title">Member Since</h4>
+                                <div class="statistic-value">-</div>
+                                <div class="statistic-description">Registration date</div>
+                            </div>
+                            <div class="statistic-box">
+                                <h4 class="statistic-title">Last Login</h4>
+                                <div class="statistic-value">-</div>
+                                <div class="statistic-description">Last activity</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Layout Tab -->
+            <div class="tab-content" id="mobile-layout-tab">
+                <h2 class="page-title">Mobile Responsive Layout</h2>
+                
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <a href="#" onclick="switchTab('dashboard')">Home</a> &gt; Mobile Layout
+                </div>
+                
+                <!-- Mobile First Approach -->
+                <div style="background-color: white; border-radius: 5px; border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 20px;">
+                    <h3 class="profile-section-title">Mobile-First Approach</h3>
+                    <p style="margin-bottom: 15px;">Our Monthly Expense Manager is designed with a mobile-first philosophy, recognizing that most users primarily track expenses on their smartphones while on the go.</p>
+                    
+                    <div class="info-box">
+                        <div class="info-box-title">Why Mobile-First Matters for Expense Tracking</div>
+                        <div class="info-box-content">
+                            <p>Expenses typically happen when you're out and about – at restaurants, stores, or traveling. Being able to record these expenses immediately on your phone leads to more accurate financial tracking and eliminates the need to save receipts or remember purchases later.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-category">
+                            <h4 class="feature-category-title">Touch-Friendly Elements</h4>
+                            <ul class="feature-list">
+                                <li>Large buttons (min 44px height) for easy tapping</li>
+                                <li>Easy-to-tap navigation elements</li>
+                                <li>Swipe gestures for lists and navigation</li>
+                                <li>Pull-to-refresh functionality for updating data</li>
+                                <li>Optimized touch targets for form elements</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="feature-category">
+                            <h4 class="feature-category-title">Mobile Optimizations</h4>
+                            <ul class="feature-list">
+                                <li>Responsive grid layouts that adapt to screen size</li>
+                                <li>Compressed navigation menu on smaller screens</li>
+                                <li>Single-column forms for easier mobile input</li>
+                                <li>Bottom navigation bar for thumb-friendly access</li>
+                                <li>Reduced data usage for faster mobile performance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bidirectional Sync -->
+                <div style="background-color: white; border-radius: 5px; border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 20px;">
+                    <h3 class="profile-section-title">Bidirectional Sync Architecture</h3>
+                    <p style="margin-bottom: 15px;">Our application provides seamless synchronization between all your devices, ensuring your financial data is always up-to-date no matter where you access it from.</p>
+                    
+                    <div style="display: flex; justify-content: space-around; align-items: center; margin: 30px 0; flex-wrap: wrap; gap: 20px;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 60px;">📱</div>
+                            <div style="margin-top: 10px; font-weight: 500;">Mobile</div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; color: #3498db; font-size: 24px; font-weight: bold;">⟷</div>
+                        
+                        <div style="text-align: center;">
+                            <div style="font-size: 80px;">☁️</div>
+                            <div style="margin-top: 10px; font-weight: 500;">Google Sheets</div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; color: #3498db; font-size: 24px; font-weight: bold;">⟷</div>
+                        
+                        <div style="text-align: center;">
+                            <div style="font-size: 60px;">💻</div>
+                            <div style="margin-top: 10px; font-weight: 500;">Desktop</div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box">
+                        <div class="info-box-title">How Sync Works</div>
+                        <div class="info-box-content">
+                            <p>All data is stored in Google Sheets, which serves as the central source of truth. When you make changes on any device, those changes are immediately pushed to Google Sheets and then synchronized to all your other devices. This ensures that you always have access to the same up-to-date information, regardless of which device you're using.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Offline Capabilities -->
+                <div style="background-color: white; border-radius: 5px; border: 1px solid #e0e0e0; padding: 20px; margin-bottom: 20px;">
+                    <h3 class="profile-section-title">Offline Capabilities</h3>
+                    <p style="margin-bottom: 15px;">Our app works even when you're offline, ensuring you can record expenses anywhere, anytime.</p>
+                    
+                    <div class="feature-category">
+                        <ul class="feature-list">
+                            <li>Record expenses without an internet connection</li>
+                            <li>Access your recent expense history offline</li>
+                            <li>View your current budget status without connectivity</li>
+                            <li>Automatic synchronization when connection is restored</li>
+                            <li>Clear sync status indicators to show pending uploads</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-box">
+                        <div class="info-box-title">Perfect for Travel</div>
+                        <div class="info-box-content">
+                            <p>Offline capabilities are especially valuable when traveling internationally, when you may not have constant internet access but still need to track expenses. All entries are securely stored on your device and synchronized when you reconnect.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <div class="sync-status" id="syncStatus">
+        <div class="sync-indicator sync-success" id="syncIndicator"></div>
+        <span id="syncText">All changes saved</span>
+    </div>
+    
+    <div class="toast" id="toastNotification"></div>
+    
+    <div class="quick-add-fab" id="quickAddFab" onclick="showQuickAdd()" style="display: none;">+</div>
+
+    <script>
+        // Initial state - show login page by default
+        document.addEventListener('DOMContentLoaded', function() {
+            switchTab('login');
+            
+            // Show quick add button on dashboard, view expenses
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    if (tabId === 'dashboard' || tabId === 'view-expenses') {
+                        document.getElementById('quickAddFab').style.display = 'flex';
+                    } else {
+                        document.getElementById('quickAddFab').style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Tab switching functionality
+        function switchTab(tabId) {
+            // Show loading for realistic UX
+            showLoading(true);
+            
+            setTimeout(() => {
+                // Hide all tab contents
+                const allTabs = document.querySelectorAll('.tab-content');
+                allTabs.forEach(tab => {
+                    tab.classList.remove('active');
+                });
+                
+                // Show selected tab content
+                const selectedTab = document.getElementById(tabId + '-tab');
+                if (selectedTab) {
+                    selectedTab.classList.add('active');
+                }
+                
+                // Update nav items active state
+                const navItems = document.querySelectorAll('.nav-item');
+                navItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('data-tab') === tabId) {
+                        item.classList.add('active');
+                    }
+                });
+                
+                // Show quick add button on appropriate pages
+                if (tabId === 'dashboard' || tabId === 'view-expenses') {
+                    document.getElementById('quickAddFab').style.display = 'flex';
+                } else {
+                    document.getElementById('quickAddFab').style.display = 'none';
+                }
+                
+                showLoading(false);
+            }, 300); // Short delay for loading effect
+        }
+        
+        // Add click event listeners to nav items
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                const tabId = this.getAttribute('data-tab');
+                switchTab(tabId);
+            });
+        });
+        
+        // Simulated expense saving
+        function saveExpense() {
+            const name = document.getElementById('spender-name').value;
+            const amount = document.getElementById('amount').value;
+            const date = document.getElementById('date').value;
+            const category = document.getElementById('category').value;
+            const description = document.getElementById('description').value;
+            
+            if (!name || !amount || !date || !category) {
+                showToast('Please fill in all required fields', 'error');
+                return;
+            }
+            
+            // Show loading and sync status
+            showLoading(true);
+            updateSyncStatus('syncing', 'Saving changes...');
+            
+            // Simulate network request
+            setTimeout(() => {
+                showLoading(false);
+                updateSyncStatus('success', 'All changes saved');
+                showToast('Expense saved successfully!', 'success');
+                document.getElementById('addExpenseForm').reset();
+                switchTab('dashboard');
+            }, 1500);
+        }
+        
+        // Loading overlay functions
+        function showLoading(show) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (show) {
+                loadingOverlay.style.display = 'flex';
+            } else {
+                loadingOverlay.style.display = 'none';
+            }
+        }
+        
+        // Sync status functions
+        function updateSyncStatus(status, message) {
+            const syncIndicator = document.getElementById('syncIndicator');
+            const syncText = document.getElementById('syncText');
+            
+            // Remove all classes
+            syncIndicator.classList.remove('sync-success', 'sync-syncing', 'sync-error');
+            
+            // Add appropriate class
+            syncIndicator.classList.add('sync-' + status);
+            
+            // Update text
+            syncText.textContent = message;
+        }
+        
+        // Toast notification function
+        function showToast(message, type = 'info') {
+            const toast = document.getElementById('toastNotification');
+            
+            // Remove all classes and add the correct one
+            toast.classList.remove('success', 'error', 'info');
+            toast.classList.add(type);
+            
+            // Set message
+            toast.textContent = message;
+            
+            // Show toast
+            toast.style.display = 'block';
+            
+            // Hide after 3 seconds
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 3000);
+        }
+        
+        // Quick add function
+        function showQuickAdd() {
+            switchTab('add-expense');
+        }
+        
+        // Simulate Google Sheets sync
+        function simulateSync() {
+            updateSyncStatus('syncing', 'Syncing with Google Sheets...');
+            
+            setTimeout(() => {
+                updateSyncStatus('success', 'All changes saved');
+                showToast('Synced successfully with Google Sheets', 'success');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
